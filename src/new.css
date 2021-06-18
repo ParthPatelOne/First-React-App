@@ -1,0 +1,34 @@
+section,
+.searchbox {
+  font-family: "Crimson Text", serif;
+  font-family: "Lora", serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Recursive", sans-serif;
+  font-family: "Roboto Slab", serif;
+  font-family: "Varela Round", sans-serif;
+}
+
+/* 
+    body{background:#d7dbd7; font-family: Roboto, sans-serif; padding: 20px;} */
+.globalInputSearch {
+  padding: 10px 20px;
+  border: none;
+  padding-right: 32px;
+  font-size: 18px;
+  padding-left: 20px;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06),
+    0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* .globalTargetList{ display: flex;  list-style: none;  padding: 0; flex-direction: column;}
+    .globalTargetList li .card{ margin-bottom: 10px; padding: 20px; background: #fff;  box-shadow: 0 1px 1px 0 rgba(0,0,0,.06), 0 2px 5px 0 rgba(0,0,0,.2); border-radius: 3px;}
+    .globalTargetList li h4{margin: 0 0 10px 0;  font-weight: 400;  font-size: 22px; line-height: 21px;}
+    .globalTargetList li h6 { margin: 0; font-weight: 400;  font-size: 13px; opacity: 0.6;}
+    .globalTargetList li p{ font-weight: 400; font-size: 14px;  line-height: 20px; } */
+.globalSearchResultNoFoundFeedback {
+  font-size: 30px;
+  padding: 20px;
+  color: #999;
+  text-align: center;
+}

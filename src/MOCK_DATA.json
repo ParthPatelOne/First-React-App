@@ -1,0 +1,38 @@
+[
+    {
+        "image": "./img/Movie 2.png",
+       "name":"Venom",
+       "category":"Hindi, 720p",
+       "link":"http://file.cm/d/EeD"
+    },
+    
+    {
+        "image": "./img/Movie 1.jpg",
+        "name": "Avengers Endgame",
+        "category": "Hindi, 720p",
+        "link": "http://file.cm/d/EeE"
+        
+    },
+    {
+        "image": "./img/Movie 4.jpg",
+        "name": "Tenet",
+        "category": "Hindi, 720p",
+        "link": "http://file.cm/d/EeG"
+        
+    },
+    {
+        "image": "./img/Movie 3.jpg",
+        "name": "Incaption",
+        "category": "Hindi, 720p",
+        "link": "http://file.cm/d/EeF"
+        
+    },
+    {
+        "image": "https://i.insider.com/6076789f420615001817555e?width=700",
+        "name": "Fast And Furious 9",
+        "category": "Unofficial-Hindi,720p",
+        "link": "http://www.moviesyug.net/assets/files/4461/Fast & Furious 9 (2021) (CAMRip) (PC HD Full Movie).mp4"
+        
+    }
+   
+]
