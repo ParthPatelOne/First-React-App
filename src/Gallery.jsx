@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import Menu from "./menu";
+
 const Gallery = () => {
   const [items, setItems] = useState(Menu);
 
@@ -15,16 +16,28 @@ const Gallery = () => {
   return (
     <>
       <div className="B flex justify-center mt-3">
-        <button className="btn active inline-flex text-white bg-indigo-600 border-0 py-2 px-3 focus:outline-none hover:bg-indigo-600 rounded-sm text-lg" onClick={() => setItems(Menu)}>
+        <button
+          className="btn active inline-flex text-white bg-indigo-600 border-0 py-2 px-3 focus:outline-none hover:bg-indigo-600 rounded-sm text-lg"
+          onClick={() => setItems(Menu)}
+        >
           Show All
         </button>
-        <button className="btn ml-1 inline-flex text-white bg-gray-700 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 hover:text-gray-900 rounded-sm text-lg" onClick={() => filterItem('nature')}>
+        <button
+          className="btn ml-1 inline-flex text-white bg-gray-700 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 hover:text-gray-900 rounded-sm text-lg"
+          onClick={() => filterItem("nature")}
+        >
           Nature
         </button>
-        <button className="btn ml-1 inline-flex text-white bg-gray-700 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 hover:text-gray-900 rounded-sm text-lg" onClick={() => filterItem('cars')}>
+        <button
+          className="btn ml-1 inline-flex text-white bg-gray-700 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 hover:text-gray-900 rounded-sm text-lg"
+          onClick={() => filterItem("cars")}
+        >
           Cars
         </button>
-        <button className="btn ml-1 inline-flex text-white bg-gray-700 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 hover:text-gray-900 rounded-sm text-lg" onClick={() => filterItem('people')}>
+        <button
+          className="btn ml-1 inline-flex text-white bg-gray-700 border-0 py-2 px-3 focus:outline-none hover:bg-gray-200 hover:text-gray-900 rounded-sm text-lg"
+          onClick={() => filterItem("people")}
+        >
           People
         </button>
       </div>
@@ -33,14 +46,24 @@ const Gallery = () => {
         <div className="container px-5 py-4 mx-auto">
           <div className="flex flex-wrap -m-4">
             {items.map((elem) => {
-              const { id, name, image, cname,link } = elem;
+              const { id, name, image, cname, link } = elem;
+
+              // add image onclick function
+
+              function openImg() {
+                window.open(image);
+              }
+              // function openTab() {
+              //   window.download(link);
+              // }
+              // add image onclick function
 
               return (
-                <div className="lg:w-1/4 md:w-1/2 p-4 w-full colu column nature transform transition duration-200 hover:scale-105">
+                <div className="lg:w-1/4 md:w-1/2 p-4 w-full nature transform transition duration-200 hover:scale-105">
                   <a
-                    href={image}
-                    target="_blank"
+                    onClick={openImg}
                     className="block relative h-48 rounded overflow-hidden"
+                    rel="noopener noreferrer"
                   >
                     <img
                       alt={image}
@@ -50,7 +73,7 @@ const Gallery = () => {
                   </a>
                   <div className="mt-2 text-center">
                     <h3 className="text-gray-400 text-xs tracking-widest title-font mb-0">
-                     {cname}
+                      {cname}
                     </h3>
                     <h2 className="NM text-gray-900 title-font text-lg font-medium">
                       {name}
@@ -64,10 +87,8 @@ const Gallery = () => {
                         >
                           <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
                         </svg>
-                        <a
-                          href={link}
-                          download
-                        >
+
+                        <a href={link} download rel="noopener noreferrer">
                           <span>Download</span>
                         </a>
                       </button>

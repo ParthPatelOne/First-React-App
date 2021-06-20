@@ -1,7 +1,7 @@
 const Menu = [
     {
        id: 1,
-       image: "./img/Nature 1.jpg",
+       image: "./img/Movie 4.jpg",
        name:"Nature",
        category: "nature",
     //    price: "12₹",

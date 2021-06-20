@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     // font-family: 'Roboto', sans-serif;
-    transition: all .2s linear;
+    transition: all .1s linear;
   }
 
   p {
@@ -42,6 +42,9 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.primary};
     // color: ${({ theme }) => theme.txt};
   }
+  a.active_class:{
+    color: color: ${({ theme }) => theme.txt};
+  } 
 `;
 
 export const lightTheme = {

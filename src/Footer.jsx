@@ -1,9 +1,20 @@
 import React from "react";
 
 const Footer = () => {
+  function openInsta() {
+    window.open("https://www.instagram.com/invites/contact/?i=17ff31nlk2z1f&utm_content=6d7tf1f");
+  }
+  // function openFace() {
+  //   window.open("https://www.w3schools.com/react/showreact.asp?filename=demo2_react_events");
+  // }
+  function openSite() {
+    window.open("https://fakedeveloper.000webhostapp.com/");
+  }
   return (
+   
     <>
       <hr />
+    
       <footer className="text-gray-600 body-font NAV">
         <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -18,10 +29,10 @@ const Footer = () => {
           <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 NM">
             © 2021.All rights reserved—
             <a
-              href="https://www.instagram.com/invites/contact/?i=17ff31nlk2z1f&utm_content=6d7tf1f"
+             
               className="text-gray-600 ml-1 NM"
               rel="noopener noreferrer"
-              target="_blank"
+              onClick={openInsta}
             >
               @ParthPatel
             </a>
@@ -41,8 +52,8 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://www.instagram.com/invites/contact/?i=17ff31nlk2z1f&utm_content=6d7tf1f"
-              target="_blank"
+              onClick={openInsta}
+              
               className="ml-3 text-gray-500 NM"
             >
               <svg
@@ -58,7 +69,7 @@ const Footer = () => {
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
               </svg>
             </a>
-            <a href="https://fakedeveloper.000webhostapp.com/" target="_blank" className="ml-3 text-gray-500  -mt-2">
+            <a onClick={openSite}  className="ml-3 text-gray-500  -mt-2">
               <button class="NM bg-transparent hover:bg-gray-900 text-blue-700 font-semibold hover:text-white py-1 px-2  border border-gray-400 hover:border-transparent rounded">
                 Basic Site
               </button>

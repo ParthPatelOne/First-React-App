@@ -3,7 +3,7 @@ import "./new.css";
 import { useState } from "react";
 // import Movies from "./moviesdata";
 import JSONDATA from "./MOCK_DATA.json";
-
+// import { NavLink } from "react-router-dom";
 const Movie = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
@@ -35,17 +35,26 @@ const Movie = () => {
                 return val;
               }
             }).map((val, key) => {
+              // button add link
+              function openTab() {
+                window.open(val.link);
+              }
+              function openImg() {
+                window.open(val.image);
+              }
+              // button added link
+
               return (
                 <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
                   <div className="bg overflow-hidden rounded-lg shadow-xl transform transition duration-200 hover:scale-105">
                     <a
-                      href={val.image}
-                      target="_blank"
-                      className="block relative h-56 rounded overflow-hidden"
+                      onClick={openImg}
+                      className="block relative h-52 rounded overflow-hidden"
+                      rel="noopener noreferrer"
                     >
                       <img
                         alt="ecommerce"
-                        className="object-cover object-center w-full h-full block"
+                        className=" object-cover object-center object-fill h-full w-full block"
                         src={val.image}
                       />
                     </a>
@@ -65,7 +74,9 @@ const Movie = () => {
                           >
                             <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
                           </svg>
-                          <a href={val.link}>
+
+                          {/* <a href={val.link}> */}
+                          <a onClick={openTab} download rel="noopener noreferrer">
                             <span>Download</span>
                           </a>
                         </button>
